@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "node-shikimori": "^2.0.2"
+  },
+  "name": "elitanime",
+  "version": "1.0.0",
+  "description": "my anime elite list",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "ruus",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

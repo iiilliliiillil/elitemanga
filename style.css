@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: inherit; */
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: "Martel", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  line-height: 1.9;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-bottom: 10%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #f92a82;
+  width: 100%;
+  height: 10rem;
+}
+
+.logo {
+  width: 9rem;
+  cursor: pointer;
+}
+
+.page {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: solid;
+  border: 0.3rem solid #f92a82;
+}
+
+.cartoon_container {
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  transition: 500ms;
+  background-color: rgb(255, 255, 255);
+  margin: 3%;
+}
+
+.info {
+  display: flex;
+}
+
+.txt_info {
+  margin-left: 2rem;
+}
+
+.headtext {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f92a82;
+  overflow: hidden;
+}
+
+.cartoon_frame {
+  width: 30%;
+
+  border: 0.3rem solid rgb(229, 229, 229);
+}
+
+.title_name {
+  size: 10%;
+  color: rgb(51, 51, 51);
+  font-family: "Martel", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 180%;
+}
+
+.bord {
+  width: 100%;
+  border: 0.1rem solid rgb(51, 51, 51);
+}
+
+.info_text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.synopsis {
+  font-family: "Martel", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-size: 110%;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+input#search {
+  color: white;
+  background-color: transparent;
+
+  padding: 12px 10px;
+  width: 60vw;
+
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font-size: 1.9rem;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.4s height;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+ul:hover {
+  background-color: #ffb4d5;
+}
+
+ul li {
+  font-size: 13px;
+  padding: 10px 10px;
+  list-style: none;
+  border-top: 1px solid #ddd;
+}
+
+.match {
+  font-weight: 600;
+  color: green;
+}
+
+.list {
+  width: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  input#search {
+    width: 40vw;
+  }
+}
