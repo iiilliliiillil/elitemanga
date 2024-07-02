@@ -6,6 +6,18 @@ import SearchView from "./views/SearchView.js";
 const searchBar = document.querySelector("#search");
 const searchDrop = document.querySelector(".drop");
 
+const debounder = (callback, time = 500) => {
+  let timeout;
+
+  return function (arg) {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      callback(arg);
+    }, time);
+  };
+};
+
 if (module.hot) {
   module.hot.accept();
 }
@@ -70,10 +82,11 @@ const showTitle = async function (dat) {
   }
 };
 
-searchBar.addEventListener("input", smartSearch);
+const deboundedSmartSearch = debounder(smartSearch);
+
+searchBar.addEventListener("input", deboundedSmartSearch);
 searchDrop.addEventListener("click", function (e) {
   showTitle(e.target.data);
-  console.log(e.target.data);
   searchDrop.style.height = 0;
   searchBar.value = "";
 });

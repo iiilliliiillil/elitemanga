@@ -16,7 +16,6 @@ export const getTitleData = async function (e) {
   try {
     const data = await getJSON(`${MANGA_API}${e}`);
     const result = data.data;
-    console.log(result);
 
     state.title = {
       id: result.mal_id,
@@ -28,8 +27,6 @@ export const getTitleData = async function (e) {
       volumes: result.volumes,
       chapters: result.chapters,
     };
-
-    console.log(state.title);
   } catch (err) {
     console.log(err);
   }
@@ -39,7 +36,6 @@ export const getQuery = async function (query) {
   try {
     state.search.query = query;
     const data = await getJSON(`https://api.jikan.moe/v4/manga?q=${query}&sfw`);
-    console.log(data);
   } catch (err) {
     console.log(err);
   }
